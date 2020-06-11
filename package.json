@@ -1,0 +1,30 @@
+{
+  "name": "svelte-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public",
+    "lint": "eslint --ext .ts,.svelte src/",
+    "postinstall": "npx degit NicoCevallos/eslint-plugin-svelte3#preprocess eslint-plugin-svelte3 --force && cd eslint-plugin-svelte3 && npm run build && cd .. && npm i -D ./eslint-plugin-svelte3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
+    "eslint": "^7.2.0",
+    "eslint-plugin-svelte3": "file:eslint-plugin-svelte3",
+    "eslint-svelte3-preprocess": "0.0.2",
+    "rollup": "^2.3.4",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "svelte": "^3.0.0",
+    "svelte-preprocess": "^3.9.7",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "sirv-cli": "^0.4.4"
+  }
+}
